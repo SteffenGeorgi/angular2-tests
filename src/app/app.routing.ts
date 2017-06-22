@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 
 import { AppComponent } from './app.component';
-import { LoginComponent } from './_directives/login/login.component';
+import { LoginComponent } from './login/login.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
 
 /*
@@ -13,9 +13,7 @@ const appRoutes: Routes = [
     { path: 'dashboard', component: DashboardComponent },
     { path: 'login', component: LoginComponent },
     { path: 'register', component: LoginComponent },
-
-    // otherwise redirect to home
-    { path: '**', redirectTo: '' }
+    { path: '**', redirectTo: '' },
 ];
 
-export const routing = RouterModule.forRoot(appRoutes);
+export const AppRouting = RouterModule.forRoot(appRoutes);
